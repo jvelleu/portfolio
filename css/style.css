@@ -1,3 +1,9 @@
+h1{
+	background-color:#000000;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
 body{
 	background-color:#FFFFFF;
 	color: #000000;
@@ -13,19 +19,21 @@ li{
 
 a{
 	text-decoration: none;
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
 
 .logo{
 	text-decoration: none;
-	font-family: Arial;
+	font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	text-transform: uppercase;
+	font-weight: bold;
 }
 	
 nav a{
 	text-decoration: none;
-	font-family: cursive;
+	font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
 
-.current{
-	text-transform: uppercase;
-}
+
+
+
