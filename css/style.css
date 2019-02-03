@@ -16,6 +16,11 @@ a{
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
 
+logo{
+	text-decoration: none;
+	font-family: Arial;
+}
+	
 nav a{
 	text-decoration: none;
 	font-family: cursive;
