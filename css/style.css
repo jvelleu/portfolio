@@ -8,16 +8,11 @@ body{
 	color: #000000;
 	font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
-	
-li{
-	text-decoration: none;
-	display: inline;
-	font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
-}
 
-a{
+nav li a{
 	text-decoration: none;
 	font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	color: #343543;
 }
 
 .logo{
@@ -27,12 +22,14 @@ a{
 	font-weight: bold;
 	color:#FFFFFF;
 }
-	
-nav a{
-	text-decoration: none;
-	font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	color: #343543;
+
+.table{
+	display: table;
 }
+
+
+	
+
 
 
 
