@@ -27,8 +27,14 @@ nav li a{
 	display: table;
 }
 
+.inline{
+	display: inline;
+}
 
-	
+.current{
+	text-decoration: underline;
+	font-weight: bold;
+}
 
 
 
