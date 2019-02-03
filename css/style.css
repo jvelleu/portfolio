@@ -1,0 +1,26 @@
+body{
+	background-color:#76FF65;
+	color: hotpink;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"arial;
+
+li{
+	text-decoration: none;
+	display:inline;
+	background-color: orchid;
+	color: gainsboro;
+	font-family: cursive;
+}
+
+a{
+	text-decoration: none;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+nav a{
+	text-decoration: none;
+	font-family: cursive;
+}
+
+.current{
+	text-transform: uppercase;
+}
