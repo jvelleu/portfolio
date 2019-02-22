@@ -9,6 +9,10 @@ body{
 	font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
 
+nav li{
+	display: inline
+}
+
 nav li a{
 	text-decoration: none;
 	font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
@@ -34,6 +38,10 @@ nav li a{
 .current{
 	text-decoration: underline;
 	font-weight: bold;
+}
+
+.gallery{
+	display: flex;
 }
 
 
