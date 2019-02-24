@@ -41,7 +41,7 @@ nav li a{
 }
 
 .gallery{
-	display: flex;
+	display: grid;
 }
 
 
