@@ -14,7 +14,6 @@ h2{
 	font-size: 14pt;
 	font-weight: 900;
 	color: black;
-<<<<<<< HEAD
 	line-height: 1.5em;
 
 }
@@ -47,34 +46,6 @@ p{
 	line-height: 1.5em;
 }
 
-=======
-}
-
-h3{
-	font-family: 'Merriweather', serif;
-	font-size: 12pt;
-	font-weight: 900;
-	color: black;
-	
-	display: none;
-
-}
-
-h4{
-	font-family: 'Merriweather Sans', sans-serif;
-	font-size: 8pt;
-	font-weight: 900;
-	color: black;
-}
-
-p{
-	font-family: 'Merriweather Sans', sans-serif;
-	font-size: 9pt;
-	font-weight: 100;
-	color: black;
-}
-
->>>>>>> origin/master
 a{
 	color: lightblue;
 }
@@ -83,7 +54,6 @@ nav li a{
 	font-family: 'Merriweather Sans', sans-serif;
 	font-weight: 300;
 	font-size: 8pt;
-<<<<<<< HEAD
 	text-decoration: none;
 	color: darkgrey;
 }
@@ -106,30 +76,6 @@ nav li a:focus{
 	font-family: 'Merriweather Sans', sans-serif;
 	font-weight: 300;
 	text-decoration: none;
-=======
-	text-decoration: none;
-	color: darkgrey;
-}
-
-nav li a:hover{
-	color: lightblue;
-}
-
-nav li a:focus{
-	color: lightblue;
-}
-
-.current{
-	color: lightblue;
-}
-
-.jump{
-	position:absolute;
-	left: -999px;
-	font-family: 'Merriweather Sans', sans-serif;
-	font-weight: 300;
-	text-decoration: none;
->>>>>>> origin/master
 	font-style: italic;
 	color: darkgrey;
 	font-size: 8pt;
