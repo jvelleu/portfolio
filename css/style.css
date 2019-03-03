@@ -87,6 +87,18 @@ nav li a:focus{
 	color: lightblue;
 }
 
+.sidebar{
+	grid-area: sidebar;
+	border-right: 1px solid darkgrey;
+	display: grid;
+	grid-template-rows: 72px auto 72px;
+	grid-area: 
+		"logo"
+		"sidebar-nav"
+		"sidebar-footer"
+
+}
+
 .logo{
 	grid-area: logo;
 	position: fixed;
@@ -99,31 +111,37 @@ nav li a:focus{
 	text-transform: uppercase;
 	font-size: 12pt;
 	height: 72px;
-	padding-left: 32px;
-}
-
-.sidebar{
-	grid-area: sidebar;
-
+	margin-left: 32px;
+	border: medium;
+	border-color: black;
 }
 
 .sidebar-nav{
+	display: none;
+	grid-area: sidebar-nav;
 	display: flex;
+	height: auto;
 	flex-direction: column;
 	justify-content: space-evenly;
-	padding-left: 32px;
-	
-	display: none;
-
+	margin-left: 32px;
 }
 
 .sidebar-nav-item{
 	
 }
 
+.sidebar-footer{
+	display: none;
+	grid-area: sidebar-footer;
+	height: 72px;
+	margin-left: 32px;
+}
+
 .header{
 	grid-area: header;
 }
+
+
 
 .header-nav{
 	display: flex;
@@ -166,8 +184,8 @@ nav li a:focus{
 .content{
 	grid-area: content;
 	grid-template-rows: 16px auto;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding-left: 2%;
+	padding-right: 2%;
 	background-image: url("../images/background_grid.svg");
 	background-size: 8px;
 
@@ -182,11 +200,7 @@ nav li a:focus{
 	height: 72px;
 }
 
-.project{
-	grid-row-start: 2;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}
+
 
 .project-item{
 	display: grid;
@@ -234,68 +248,114 @@ nav li a:focus{
 	grid-template-rows: auto auto auto;
 	justtify-items: center;
 	align-items: center;
-	grid-gap: 32px;
-
+	grid-gap: 2%;
 }
 
-.gallery-item-a{
-	grid-column: 1/2;
-	grid-row: 1/2;
-	max-width: 100%
-}
-
-.gallery-item-b{
-	grid-column-start: 2/3;
-	grid-row: 1/2;
-}
-
-.gallery-item-c{
-	grid-column-start: 3/4;
-	grid-row: 1/2;
-}
-
-.gallery-item-d{
-	grid-column-start: 1/2;
-	grid-row: 2/3;
-}
-
-.gallery-item-e{
-	grid-column-start: 2/3;
-	grid-row: 2/3;
-}
-
-.gallery-item-f{
-	grid-column-start: 3/4;
-	grid-row: 2/3;
-}
-
-.gallery-item-g{
-	grid-column-start: 1/2;
-	grid-row: 3/4;
-	max-width: 100%
-}
-
-.gallery-item-h{
-	grid-column-start: 2/3;
-	grid-row: 3/4;
-}
-
-.gallery-item-i{
-	grid-column-start: 4/4;
-	grid-row: 3/4;
-}
+.gallery-item-a{grid-column: 1/2; grid-row: 1/2;}
+.gallery-item-b{grid-column: 2/3; grid-row: 1/2;}
+.gallery-item-c{grid-column: 3/4; grid-row: 1/2;}
+.gallery-item-d{grid-column: 1/2; grid-row: 2/3;}
+.gallery-item-e{grid-column: 2/3; grid-row: 2/3;}
+.gallery-item-f{grid-column: 3/4; grid-row: 2/3;}
+.gallery-item-g{grid-column: 1/2; grid-row: 3/4;}
+.gallery-item-h{grid-column: 2/3; grid-row: 3/4;}
+.gallery-item-i{grid-column: 3/4; grid-row: 3/4;}
 
 .gallery-img{
-	max-width: 100%
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+	object-fit: cover;
 }
 
-.main-grid{
+
+@media screen and (max-width: 600px){
+	.main-grid{
+	display: grid;
+	grid-template-rows: 72px auto 72px;
+	grid-template-areas: 
+		"header"
+		"content"
+		"footer"
+	}
+	
+	.project{
+	grid-row-start: 2;
+	display: grid;
+	grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (min-width: 601px){
+	.main-grid{
+	display: grid;
+	grid-template-rows: 72px auto 72px;
+	grid-template-areas: 
+		"header"
+		"content"
+		"footer"
+	}
+	
+	.project{
+	grid-row-start: 2;
+	display: grid;
+	grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (min-width: 901px){
+	.main-grid{
+	display: grid;
+	grid-template-columns: 144px auto;
+	grid-template-rows: 72px auto 72px;
+	grid-template-areas: 
+		"sidebar header"
+		"sidebar content"
+		"sidebar footer"
+	}
+	
+	.project{
+	grid-row-start: 2;
+	display: grid;
+	grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (min-width: 1201px){
+	.main-grid{
 	display: grid;
 	grid-template-columns: 216px auto;
 	grid-template-rows: 72px auto 72px;
 	grid-template-areas: 
-		"logo header"
+		"sidebar header"
 		"sidebar content"
 		"sidebar footer"
+	}
+	
+	.project{
+	grid-row-start: 2;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	}
+}
+}
+
+@media screen and (min-width: 1801px){
+	.main-grid{
+	display: grid;
+	grid-template-columns: 216px auto;
+	grid-template-rows: 72px auto 72px;
+	grid-template-areas: 
+		"sidebar header"
+		"sidebar content"
+		"sidebar footer"
+	}
+	
+	.project{
+	grid-row-start: 2;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	}
+}
 }
 
