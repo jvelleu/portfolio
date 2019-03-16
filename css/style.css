@@ -31,7 +31,6 @@ h3{
 
 h4{
 	font-family: 'Merriweather Sans', sans-serif;
-	font-size: 8pt;
 	font-weight: 900;
 	color: black;
 	line-height: 1.5em;
@@ -40,34 +39,32 @@ h4{
 
 p{
 	font-family: 'Merriweather Sans', sans-serif;
-	font-size: 9pt;
 	font-weight: 100;
 	color: black;
 	line-height: 1.5em;
 }
 
 a{
-	color: lightblue;
+	color: blue;
 }
 
 nav li a{
 	font-family: 'Merriweather Sans', sans-serif;
 	font-weight: 300;
-	font-size: 8pt;
 	text-decoration: none;
-	color: darkgrey;
+	color: #424352;
 }
 
 nav li a:hover{
-	color: lightblue;
+	color: black;
 }
 
 nav li a:focus{
-	color: lightblue;
+	color: black;
 }
 
 .current{
-	color: lightblue;
+	color: black;
 }
 
 .jump{
@@ -77,14 +74,14 @@ nav li a:focus{
 	font-weight: 300;
 	text-decoration: none;
 	font-style: italic;
-	color: darkgrey;
+	color: #424352;
 	font-size: 8pt;
 }
 
 .jump:focus{
 	position:absolute;
 	left: 144px;
-	color: lightblue;
+	color: black;
 }
 
 .sidebar{
@@ -101,19 +98,20 @@ nav li a:focus{
 
 .logo{
 	grid-area: logo;
-	position: fixed;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	height: 72px;
+}
+
+.logo-text{
+	margin-left: 32px;
 	font-family: 'Merriweather Sans', sans-serif;
 	font-weight: 900;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 12pt;
-	height: 72px;
-	margin-left: 32px;
-	border: medium;
-	border-color: black;
+	line-height: 1em;
 }
 
 .sidebar-nav{
@@ -141,8 +139,6 @@ nav li a:focus{
 	grid-area: header;
 }
 
-
-
 .header-nav{
 	display: flex;
 	flex-direction: row;
@@ -169,16 +165,16 @@ nav li a:focus{
 	font-family: 'Merriweather Sans', sans-serif;
 	font-weight: 300;
 	text-decoration: none;
-	color: darkgrey;
+	color: #424352;
 	font-size: 8pt;
 }
 
 .footer-link:hover{
-	color: lightblue;
+	color: black;
 }
 
 .footer-link:focus{
-	color: lightblue;
+	color: black;
 }
 
 .content{
@@ -200,7 +196,10 @@ nav li a:focus{
 	height: 72px;
 }
 
-
+.project{
+	grid-row-start: 2;
+	display: grid;
+	}
 
 .project-item{
 	display: grid;
@@ -241,6 +240,10 @@ nav li a:focus{
 	max-width: 100%
 }
 
+.rwd-img{
+	max-width: 10px
+}
+
 .gallery{
 	grid-row-start: 2;
 	display: grid;
@@ -268,94 +271,135 @@ nav li a:focus{
 	object-fit: cover;
 }
 
+.main-grid{
+	display: grid;
+	}
+
+
 
 @media screen and (max-width: 600px){
 	.main-grid{
-	display: grid;
-	grid-template-rows: 72px auto 72px;
-	grid-template-areas: 
-		"header"
-		"content"
-		"footer"
+		grid-template-rows: 72px 72px auto 72px;
+		grid-template-areas: 
+			"logo"
+			"header"
+			"content"
+			"footer"
 	}
+	
+	.gallery{
+		grid-template-columns: auto;
+		grid-template-rows: repeat(9, 1fr);
+	}
+	
+	.gallery-item-a{grid-column: 1/2; grid-row: 1/2;}
+	.gallery-item-b{grid-column: 1/2; grid-row: 2/3;}
+	.gallery-item-c{grid-column: 1/2; grid-row: 3/4;}
+	.gallery-item-d{grid-column: 1/2; grid-row: 4/5;}
+	.gallery-item-e{grid-column: 1/2; grid-row: 5/6;}
+	.gallery-item-f{grid-column: 1/2; grid-row: 6/7;}
+	.gallery-item-g{grid-column: 1/2; grid-row: 7/8;}
+	.gallery-item-h{grid-column: 1/2; grid-row: 8/9;}
+	.gallery-item-i{grid-column: 1/2; grid-row: 9/10;}
+	
+	p{font-size: 12pt;}
+	
+	nav li a{font-size: 12pt;}
+	
+	.logo{position: static;}
 	
 	.project{
 	grid-row-start: 2;
 	display: grid;
 	grid-template-columns: 1fr;
 	}
+	
+	.content{background-size: 12px;}
+	
+	p{font-size: 12pt;}
+	
+	h4{font-size: 12pt;}
+	
+	nav li a{font-size: 12pt;}
+	
+	.footer-link{font-size: 12pt;}
 }
 
 @media screen and (min-width: 601px){
 	.main-grid{
-	display: grid;
-	grid-template-rows: 72px auto 72px;
-	grid-template-areas: 
-		"header"
-		"content"
-		"footer"
+		grid-template-rows: 72px 72px auto 72px;
+		grid-template-areas: 
+			"logo"
+			"header"
+			"content"
+			"footer"
 	}
 	
-	.project{
-	grid-row-start: 2;
-	display: grid;
-	grid-template-columns: 1fr;
-	}
+	p{font-size: 8pt;}
+	
+	h4{font-size: 8pt;}
+	
+	nav li a{font-size: 8pt;}
+	
+	.footer-link{font-size: 8pt;}
+
+	.logo{position: static;}
+	
+	.project{grid-template-columns: 1fr;}
+	
+	.content{background-size: 8px;}
 }
+
 
 @media screen and (min-width: 901px){
 	.main-grid{
-	display: grid;
-	grid-template-columns: 144px auto;
-	grid-template-rows: 72px auto 72px;
-	grid-template-areas: 
-		"sidebar header"
-		"sidebar content"
-		"sidebar footer"
+		grid-template-rows: 72px auto 72px;
+		grid-template-columns: 144px auto;
+		grid-template-areas: 
+			"logo header"
+			"sidebar content"
+			"sidebar footer"
 	}
 	
-	.project{
-	grid-row-start: 2;
-	display: grid;
-	grid-template-columns: 1fr;
+	.logo{
+		width: 144px;
+		position: fixed;
+		border-right: 1px solid darkgrey;
 	}
+	
+	.project{grid-template-columns: 1fr;}
+	
+	.content{background-size: 8px;}
+
 }
+
 
 @media screen and (min-width: 1201px){
 	.main-grid{
-	display: grid;
-	grid-template-columns: 216px auto;
-	grid-template-rows: 72px auto 72px;
-	grid-template-areas: 
-		"sidebar header"
-		"sidebar content"
-		"sidebar footer"
+		grid-template-rows: 72px auto 72px;
+		grid-template-columns: 216px auto;
+		grid-template-areas: 
+			"logo header"
+			"sidebar content"
+			"sidebar footer"
 	}
 	
-	.project{
-	grid-row-start: 2;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	.logo{
+		width: 216px;
+		position: fixed;
+		border-right: 1px solid darkgrey;
 	}
-}
+	
+	.project{grid-template-columns: 1fr 1fr;}
+		
+	.content{background-size: 8px;}
+
 }
 
+
+/* For later implementation
 @media screen and (min-width: 1801px){
-	.main-grid{
-	display: grid;
-	grid-template-columns: 216px auto;
-	grid-template-rows: 72px auto 72px;
-	grid-template-areas: 
-		"sidebar header"
-		"sidebar content"
-		"sidebar footer"
-	}
-	
-	.project{
-	grid-row-start: 2;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	}
+
 }
-}
+*/
 
