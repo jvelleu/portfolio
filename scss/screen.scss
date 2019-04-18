@@ -6,86 +6,102 @@
 @import "compass/reset";
 
 
+//Typography Variables
+$serif: 'Merriweather', serif;
+$sans: 'Merriweather Sans', sans-serif;
+
+$large: 24pt;
+$medium: 16pt;
+$small: 12pt;
+
+$regular: 300;
+$bold: 900;
+
+$body-line-height: 1em;
+$heading-line-height: 1.5em;
+
+$black: #000000;
+$green: #D5FE00;
+$blue: #2931FF;
+
+
+//Typography Mixins
+@mixin body($size) {font: $regular $size $sans;}
+
+@mixin body-bold($size) {font: $bold $size $sans;}
+
+@mixin heading($size) {font: $bold $size $serif;}
+	
+	
+//Layout Mixins
+@mixin col-row($col, $row) {
+	grid-column: $col;
+	grid-row: $row;
+}
+
 h1{
-	font-family: 'Merriweather', serif;
-	font-size: 24pt;
-	font-weight: 900;
-	color: black;
+	@include heading($large);
+	color: $black;
+	line-height: $heading-line-height;
 }
 
 h2{
-	font-family: 'Merriweather', serif;
-	font-size: 14pt;
-	font-weight: 900;
-	color: black;
-	line-height: 1.5em;
-
+	@include heading($medium);
+	color: $black;
+	line-height: $heading-line-height;
 }
 
 h3{
-	font-family: 'Merriweather', serif;
-	font-size: 12pt;
-	font-weight: 900;
-	color: black;
-	line-height: 1.5em;
-
-	display: none;
-
+	@include heading($small);
+	color: $black;
+	line-height: $heading-line-height;
 }
 
 h4{
-	font-family: 'Merriweather Sans', sans-serif;
-	font-weight: 900;
-	color: black;
-	line-height: 1.5em;
-
+	@include body-bold($small);
+	color: $black;
+	line-height: $body-line-height;
 }
 
 p{
-	font-family: 'Merriweather Sans', sans-serif;
-	font-weight: 100;
-	color: black;
-	line-height: 1.5em;
+	@include body($small);
+	color: $black;
+	line-height: $body-line-height;
 }
 
 a{
-	color: blue;
-}
-
-nav li a{
-	font-family: 'Merriweather Sans', sans-serif;
-	font-weight: 300;
+	@include body($small);
+	color: $blue;
+	line-height: $body-line-height;
 	text-decoration: none;
-	color: #424352;
 }
 
-nav li a:hover{
-	color: black;
-}
-
-nav li a:focus{
-	color: black;
+nav {
+	li {
+		a {
+			@include body($small);
+			color: $blue;
+			line-height: $body-line-height;
+			text-decoration: none;
+			color: $black;
+			&:hover {color: $blue;}
+			&:focus {color: $blue;}
+		}
+	}
 }
 
 .current{
-	color: black;
+	color: $blue;
 }
 
 .jump{
 	position:absolute;
 	left: -999px;
-	font-family: 'Merriweather Sans', sans-serif;
-	font-weight: 300;
-	text-decoration: none;
 	font-style: italic;
-	color: #424352;
-	font-size: 8pt;
-}
-
-.jump:focus{
-	position:absolute;
-	left: 144px;
-	color: black;
+	&:focus {
+		position:absolute;
+		left: 144px;
+	}
 }
 
 .sidebar{
