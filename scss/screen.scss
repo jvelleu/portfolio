@@ -26,6 +26,12 @@ $green: #D5FE00;
 $blue: #2931FF;
 
 
+//Layout Variables
+$header: 72px;
+$footer: 72px;
+$sidebar: 144px;
+
+
 //Typography Mixins
 @mixin body($size) {
 	font-family: $sans;
@@ -114,7 +120,7 @@ nav {
 	font-style: italic;
 	&:focus {
 		position:absolute;
-		left: 144px;
+		left: $sidebar;
 	}
 }
 
@@ -122,7 +128,7 @@ nav {
 	grid-area: sidebar;
 	border-right: 1px solid darkgrey;
 	display: grid;
-	grid-template-rows: 72px auto 72px;
+	grid-template-rows: $header auto $footer;
 	grid-area: 
 		"logo"
 		"sidebar-nav"
@@ -135,7 +141,7 @@ nav {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	height: 72px;
+	height: $header;
 }
 
 .logo-text {
@@ -165,7 +171,7 @@ nav {
 .sidebar-footer {
 	display: none;
 	grid-area: sidebar-footer;
-	height: 72px;
+	height: $footer;
 	margin-left: 32px;
 }
 
@@ -174,11 +180,12 @@ nav {
 }
 
 .header-nav {
+	background-color: white;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-	height: 72px;
+	height: $header;
 }
 
 .header-nav-item {
@@ -208,6 +215,7 @@ nav {
 	background-image: url("../images/background_grid.svg");
 	background-size: 8px;
 	background-attachment: fixed;
+	z-index: -1;
 }
 
 .title {
@@ -216,7 +224,7 @@ nav {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	height: 72px;
+	height: $header;
 }
 
 .project {
@@ -335,14 +343,12 @@ nav {
 		grid-row-start: 2;
 		display: grid;
 		grid-template-columns: 1fr;
-	}
-	
-	.content {background-attachment: scroll;}
+	}	
 }
 
 @media screen and (min-width: 601px) {
 	.main-grid {
-		grid-template-rows: 72px 72px auto 72px;
+		grid-template-rows: $header $header auto $footer;
 		grid-template-areas: 
 			"logo"
 			"header"
@@ -351,16 +357,14 @@ nav {
 	}
 	
 	.logo {position: static;}
-	
+		
 	.project {grid-template-columns: 1fr 1fr;}
-	
-	.content {background-attachment: scroll;}
 }
 
 @media screen and (min-width: 901px) {
 	.main-grid {
-		grid-template-rows: 72px auto 72px;
-		grid-template-columns: 144px auto;
+		grid-template-rows: $header auto $footer;
+		grid-template-columns: $sidebar auto;
 		grid-template-areas: 
 			"logo header"
 			"sidebar content"
@@ -368,7 +372,7 @@ nav {
 	}
 	
 	.logo {
-		width: 144px;
+		width: $sidebar - 1px;
 		position: fixed;
 		border-right: 1px solid darkgrey;
 	}
