@@ -179,7 +179,7 @@ nav {
 	grid-area: header;
 }
 
-.header-nav {
+.header-nav {   
 	background-color: white;
 	display: flex;
 	flex-direction: row;
@@ -190,6 +190,7 @@ nav {
 
 .header-nav-item {
 	padding: 16px;
+	background-color: white;
 }
 
 .footer {
