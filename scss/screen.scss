@@ -51,6 +51,8 @@ $blue: #2931FF;
 	grid-row: $row;
 }
 
+
+//Styles
 h1{
 	@include heading($large);
 	color: $black;
@@ -286,15 +288,15 @@ nav {
 	grid-gap: 2%;
 }
 
-.gallery-item-a{grid-column: 1/2; grid-row: 1/2;}
-.gallery-item-b{grid-column: 2/3; grid-row: 1/2;}
-.gallery-item-c{grid-column: 3/4; grid-row: 1/2;}
-.gallery-item-d{grid-column: 1/2; grid-row: 2/3;}
-.gallery-item-e{grid-column: 2/3; grid-row: 2/3;}
-.gallery-item-f{grid-column: 3/4; grid-row: 2/3;}
-.gallery-item-g{grid-column: 1/2; grid-row: 3/4;}
-.gallery-item-h{grid-column: 2/3; grid-row: 3/4;}
-.gallery-item-i{grid-column: 3/4; grid-row: 3/4;}
+.gallery-item-a{@include col-row(1/2, 1/2);}
+.gallery-item-b{@include col-row(2/3, 1/2);}
+.gallery-item-c{@include col-row(3/4, 1/2);}
+.gallery-item-d{@include col-row(1/2, 2/3);}
+.gallery-item-e{@include col-row(2/3, 2/3);}
+.gallery-item-f{@include col-row(3/4, 2/3);}
+.gallery-item-g{@include col-row(1/2, 3/4);}
+.gallery-item-h{@include col-row(2/3, 3/4);}
+.gallery-item-i{@include col-row(3/4, 3/4);}
 
 .gallery-img{
 	width: 100%;
@@ -308,7 +310,7 @@ nav {
 	}
 
 
-
+//Media Queries
 @media screen and (max-width: 600px){
 	.main-grid{
 		grid-template-rows: 72px 72px auto 72px;
