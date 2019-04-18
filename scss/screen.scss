@@ -12,7 +12,7 @@ $sans: 'Merriweather Sans', sans-serif;
 
 $large: 24pt;
 $medium: 16pt;
-$small: 20pt;
+$small: 12pt;
 
 $regular: 300;
 $bold: 900;
@@ -334,27 +334,15 @@ nav {
 	.gallery-item-h{grid-column: 1/2; grid-row: 8/9;}
 	.gallery-item-i{grid-column: 1/2; grid-row: 9/10;}
 	
-	p{font-size: 12pt;}
-	
-	nav li a{font-size: 12pt;}
-	
 	.logo{position: static;}
 	
 	.project{
-	grid-row-start: 2;
-	display: grid;
-	grid-template-columns: 1fr;
+		grid-row-start: 2;
+		display: grid;
+		grid-template-columns: 1fr;
 	}
 	
-	.content{background-size: 12px;}
-	
-	p{font-size: 12pt;}
-	
-	h4{font-size: 12pt;}
-	
-	nav li a{font-size: 12pt;}
-	
-	.footer-link{font-size: 12pt;}
+	.content{background-size: 12px;}	
 }
 
 @media screen and (min-width: 601px){
@@ -367,14 +355,7 @@ nav {
 			"footer"
 	}
 	
-	p{font-size: 8pt;}
 	
-	h4{font-size: 8pt;}
-	
-	nav li a{font-size: 8pt;}
-	
-	.footer-link{font-size: 8pt;}
-
 	.logo{position: static;}
 	
 	.project{grid-template-columns: 1fr;}
