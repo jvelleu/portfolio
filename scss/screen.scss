@@ -13,6 +13,7 @@ $sans: 'Merriweather Sans', sans-serif;
 $large: 24pt;
 $medium: 16pt;
 $small: 12pt;
+$tiny: 8pt;
 
 $regular: 300;
 $bold: 900;
@@ -92,10 +93,9 @@ a{
 
 nav {
 	li {
+		@include body($small);
+		line-height: $body-line-height;
 		a {
-			@include body($small);
-			color: $blue;
-			line-height: $body-line-height;
 			text-decoration: none;
 			color: $black;
 			&:hover {color: $blue;}
@@ -196,19 +196,9 @@ nav {
 }
 
 .footer-link{
-	font-family: 'Merriweather Sans', sans-serif;
-	font-weight: 300;
-	text-decoration: none;
-	color: #424352;
-	font-size: 8pt;
-}
-
-.footer-link:hover{
-	color: black;
-}
-
-.footer-link:focus{
-	color: black;
+			color: $black;
+			&:hover {color: $blue;}
+			&:focus {color: $blue;}
 }
 
 .content{

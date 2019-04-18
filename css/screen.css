@@ -92,18 +92,18 @@ a {
   line-height: 1.5em;
   text-decoration: none; }
 
-nav li a {
+nav li {
   font-family: "Merriweather Sans", sans-serif;
   font-style: 300;
   font-size: 12pt;
-  color: #2931FF;
-  line-height: 1.5em;
-  text-decoration: none;
-  color: #000000; }
-  nav li a:hover {
-    color: #2931FF; }
-  nav li a:focus {
-    color: #2931FF; }
+  line-height: 1.5em; }
+  nav li a {
+    text-decoration: none;
+    color: #000000; }
+    nav li a:hover {
+      color: #2931FF; }
+    nav li a:focus {
+      color: #2931FF; }
 
 .current {
   color: #2931FF; }
@@ -177,17 +177,11 @@ nav li a {
   height: 72px; }
 
 .footer-link {
-  font-family: 'Merriweather Sans', sans-serif;
-  font-weight: 300;
-  text-decoration: none;
-  color: #424352;
-  font-size: 8pt; }
-
-.footer-link:hover {
-  color: black; }
-
-.footer-link:focus {
-  color: black; }
+  color: #000000; }
+  .footer-link:hover {
+    color: #2931FF; }
+  .footer-link:focus {
+    color: #2931FF; }
 
 .content {
   grid-area: content;
