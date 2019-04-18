@@ -26,13 +26,25 @@ $blue: #2931FF;
 
 
 //Typography Mixins
-@mixin body($size) {font: $regular $size $sans;}
+@mixin body($size) {
+	font-family: $sans;
+	font-style: $regular;
+	font-size: $size;
+}
 
-@mixin body-bold($size) {font: $bold $size $sans;}
+@mixin body-bold($size) {
+	font-family: $sans;
+	font-style: $bold;
+	font-size: $size;
+}
 
-@mixin heading($size) {font: $bold $size $serif;}
+@mixin heading($size) {
+	font-family: $serif;
+	font-style: $bold;
+	font-size: $size;
+}
 	
-	
+
 //Layout Mixins
 @mixin col-row($col, $row) {
 	grid-column: $col;
