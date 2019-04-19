@@ -9,6 +9,7 @@ function fadeOut(element) {
 		opacity -= 0.05;
 		if (opacity <= 0){
 			// complete
+			console.log(element);
 			element.style.opacity = 0;
 			element.style.display = "none";
 			return true;
@@ -25,8 +26,8 @@ function fadeIn(element) {
 		opacity += 0.05;
 		if (opacity >= 1){
 			// complete
+			console.log(element);
 			element.style.opacity = 1;
-			element.style.display = "block";
 			return true;
 		}
 		element.style.opacity = opacity;
@@ -41,15 +42,15 @@ function bannerChange() {
 	let len = banners.length;
 	
 	for (i = 0; i < len; i++) {
-		//banners[i].style.display = "none";
 		fadeOut(banners[i]);
+		//banners[i].style.display = "none";
 	}
 	
 	banner_index++;
 	if (banner_index > len) {banner_index = 1} 
 	
-	//banners[banner_index-1].style.display = "block"; 
-	fadeIn(banners[i]);
-	
-	setTimeout(bannerChange, 1000); // Change image every 10 seconds
+	banners[banner_index-1].style.display = "block"; 
+	fadeIn(banners[banner_index-1]);
+
+	setTimeout(bannerChange, 2000); // Change image every 10 seconds
 }
