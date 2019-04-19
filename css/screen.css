@@ -309,7 +309,7 @@ nav li {
 
   .gallery {
     grid-template-columns: auto;
-    grid-template-rows: repeat(10, 1fr); }
+    grid-template-rows: repeat(9, 1fr); }
 
   .gallery-item-a {
     grid-column: 1;

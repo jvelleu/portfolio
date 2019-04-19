@@ -317,9 +317,6 @@ nav {
 	border-bottom: 1px solid $black;
 }
 
-.fade-in {
-}
-
 .main-grid {
 	display: grid;
 }
@@ -338,7 +335,7 @@ nav {
 	
 	.gallery {
 		grid-template-columns: auto;
-		grid-template-rows: repeat(10, 1fr);
+		grid-template-rows: repeat(9, 1fr);
 	}
 	
 	.gallery-item-a {@include col-row(1, 1);}
@@ -350,7 +347,7 @@ nav {
 	.gallery-item-g {@include col-row(1, 7);}
 	.gallery-item-h {@include col-row(1, 8);}
 	.gallery-item-i {@include col-row(1, 9);}
-		
+	
 	.logo {position: static;}
 	
 	.project {
@@ -377,7 +374,7 @@ nav {
 	}
 	
 	.logo {position: static;}
-		
+	
 	.project {grid-template-columns: 1fr 1fr;}
 	
 	.content {background-attachment: fixed;}
