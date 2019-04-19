@@ -33,7 +33,7 @@ function fadeIn(element) {
 	increase();
 }
 
-function showSlides() {
+function bannerChange() {
 	let i;
 	let banners = document.getElementsByClassName("featured-item");
 	let len = banners.length;
@@ -49,5 +49,5 @@ function showSlides() {
 	//banners[banner_index-1].style.display = "block"; 
 	fadeIn(banners[i]);
 	
-	setTimeout(showSlides, 1000); // Change image every 10 seconds
+	setTimeout(bannerChange, 1000); // Change image every 10 seconds
 }
