@@ -1,7 +1,7 @@
 // JavaScript Document
 
 var banner_index = 0;
-showSlides();
+bannerChange();
 
 function fadeOut(element) {
 	let opacity = 1;
@@ -10,7 +10,7 @@ function fadeOut(element) {
 		if (opacity <= 0){
 			// complete
 			element.style.opacity = 0;
-			element.style.display: none;
+			element.style.display = "none";
 			return true;
 		}
 		element.style.opacity = opacity;
@@ -26,7 +26,7 @@ function fadeIn(element) {
 		if (opacity >= 1){
 			// complete
 			element.style.opacity = 1;
-			element.style.display: block;
+			element.style.display = "block";
 			return true;
 		}
 		element.style.opacity = opacity;
