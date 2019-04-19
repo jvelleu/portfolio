@@ -10,6 +10,7 @@ function fadeOut(element) {
 		if (opacity <= 0){
 			// complete
 			element.style.opacity = 0;
+			element.style.display: none;
 			return true;
 		}
 		element.style.opacity = opacity;
@@ -25,6 +26,7 @@ function fadeIn(element) {
 		if (opacity >= 1){
 			// complete
 			element.style.opacity = 1;
+			element.style.display: block;
 			return true;
 		}
 		element.style.opacity = opacity;
