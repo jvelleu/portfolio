@@ -360,13 +360,9 @@ nav {
 		grid-template-columns: 1fr;
 	}
 	
-	.featured {
-		display: none;
-	}
+	.featured {display: none !important;}
 	
-	.featured-item {
-		display: none;
-	}
+	.featured-item {display: none !important;}
 }
 
 @media screen and (min-width: 601px) {

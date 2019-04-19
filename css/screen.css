@@ -357,10 +357,10 @@ nav li {
     grid-template-columns: 1fr; }
 
   .featured {
-    display: none; }
+    display: none !important; }
 
   .featured-item {
-    display: none; } }
+    display: none !important; } }
 @media screen and (min-width: 601px) {
   .main-grid {
     grid-template-rows: 72px 72px auto 72px;
