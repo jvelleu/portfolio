@@ -18,8 +18,8 @@ $tiny: 8pt;
 $regular: 300;
 $bold: 900;
 
-$body-line-height: 1.5em;
-$heading-line-height: 1em;
+$loose: 1.5em;
+$tight: 1em;
 
 $black: #000000;
 $green: #D5FE00;
@@ -55,7 +55,7 @@ $sidebar: 144px;
 	font-family: $sans;
 	font-weight: $bold;
 	font-size: $small;
-	line-height: $heading-line-height;
+	line-height: $tight;
 	text-transform: uppercase;
 }
 	
@@ -71,44 +71,44 @@ $sidebar: 144px;
 h1 {
 	@include heading($large);
 	color: $black;
-	line-height: $heading-line-height;
+	line-height: $tight;
 }
 
 h2 {
 	@include heading($medium);
 	color: $black;
-	line-height: $heading-line-height;
+	line-height: $tight;
 }
 
 h3 {
 	@include heading($small);
 	color: $black;
-	line-height: $heading-line-height;
+	line-height: $tight;
 }
 
 h4 {
 	@include body-bold($small);
 	color: $black;
-	line-height: $body-line-height;
+	line-height: $loose;
 }
 
 p {
 	@include body($small);
 	color: $black;
-	line-height: $body-line-height;
+	line-height: $loose;
 }
 
 a {
 	@include body($small);
 	color: $blue;
-	line-height: $body-line-height;
+	line-height: $loose;
 	text-decoration: none;
 }
 
 nav {
 	li {
 		@include body($small);
-		line-height: $body-line-height;
+		line-height: $loose;
 		a {
 			text-decoration: none;
 			color: $black;
@@ -217,7 +217,6 @@ nav {
 	background-color: white;
 	background-image: url("../images/background_grid.svg");
 	background-size: 8px;
-	background-attachment: fixed;
 }
 
 .title {
@@ -360,6 +359,8 @@ nav {
 		grid-template-columns: 1fr;
 	}
 	
+	.content {background-attachment: scroll;}
+	
 	.featured {display: none !important;}
 	
 	.featured-item {display: none !important;}
@@ -378,6 +379,8 @@ nav {
 	.logo {position: static;}
 		
 	.project {grid-template-columns: 1fr 1fr;}
+	
+	.content {background-attachment: fixed;}
 }
 
 @media screen and (min-width: 901px) {
@@ -397,4 +400,6 @@ nav {
 	}
 	
 	.project {grid-template-columns: 1fr 1fr;}
+	
+	.content {background-attachment: fixed;}
 }

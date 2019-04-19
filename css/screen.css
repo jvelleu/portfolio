@@ -189,8 +189,7 @@ nav li {
   padding-right: 2%;
   background-color: white;
   background-image: url("../images/background_grid.svg");
-  background-size: 8px;
-  background-attachment: fixed; }
+  background-size: 8px; }
 
 .title {
   display: flex;
@@ -356,6 +355,9 @@ nav li {
     display: grid;
     grid-template-columns: 1fr; }
 
+  .content {
+    background-attachment: scroll; }
+
   .featured {
     display: none !important; }
 
@@ -370,7 +372,10 @@ nav li {
     position: static; }
 
   .project {
-    grid-template-columns: 1fr 1fr; } }
+    grid-template-columns: 1fr 1fr; }
+
+  .content {
+    background-attachment: fixed; } }
 @media screen and (min-width: 901px) {
   .main-grid {
     grid-template-rows: 72px auto 72px;
@@ -383,4 +388,7 @@ nav li {
     border-right: 1px solid #000000; }
 
   .project {
-    grid-template-columns: 1fr 1fr; } }
+    grid-template-columns: 1fr 1fr; }
+
+  .content {
+    background-attachment: fixed; } }
