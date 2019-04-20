@@ -15,7 +15,7 @@
 	<header class="header">
 		<a class="jump" href="#content">Jump to content</a>
 		<nav>
-			<ul class="header-nav">
+			<ul id="sticky-nav" class="header-nav">
 				<li class="header-nav-item"><a class="current" href="index.html">Work</a></li>
             	<li class="header-nav-item"><a href="resume.html">Resume</a></li>
 				<li class="header-nav-item"><a href="about.html">About</a></li>
@@ -27,6 +27,15 @@
 	<aside class="logo">
 		<p class="logo-text">Jesse<br>Velleu</p>
 	</aside>
+	
+	<nav class="h-menu">
+		<div onclick="openMenu()"><i class="fa fa-bars fa-2x"></i></div>
+		<ul class="h-menu-nav">
+			<li class="h-menu-nav-item"><a class="current" href="index.html">Work</a></li>
+            <li class="h-menu-nav-item"><a href="resume.html">Resume</a></li>
+			<li class="h-menu-nav-item"><a href="about.html">About</a></li>
+       	</ul>
+	</nav>
 	
 	<nav class="sidebar">
 		
@@ -42,6 +51,7 @@
 		</div>
 		
 		<div class="featured">
+			<div class="featured-background"></div>
 			<a class="featured-item" href="nutrientstar.html">
 				<img class="gallery-img" src="../images/featured_nutrientstar_1.png" alt="Featured Project: Nutrient Star">
 			</a>
@@ -84,11 +94,13 @@
 	
 	<footer class="footer">
 		<div>
-			<p><a class="footer-link" href="#content">Back to Top</a></p>
+			<p><a class="footer-link" href="#content">Top</a></p>
 		</div>
 	</footer>
 	
 	<script src="..\javascripts\banner.js"></script>
+	<script src="..\javascripts\hamburger.js"></script>
+	<script src="..\javascripts\sticky.js"></script>
 	
 </body>
 
