@@ -13,7 +13,6 @@ function fadeOut(element) {
 			return true;
 		}
 		element.style.opacity = opacity;
-		//element.style.display = "none";
 		requestAnimationFrame(decrease);
 	}
 	decrease();

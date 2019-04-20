@@ -9,7 +9,7 @@ generated_images_path = "/Users/jessevelleu/jvelleu.github.io/generatedimages"
 javascripts_dir = "javascripts"
 fonts_dir = "fonts"
 
-output_style = :nested
+output_style = :compressed
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
