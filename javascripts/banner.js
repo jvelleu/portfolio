@@ -40,14 +40,12 @@ function bannerChange() {
 	let len = banners.length;
 	
 	for (i = 0; i < len; i++) {
-		//banners[i].style.display = "none";
 		fadeOut(banners[i]);
 	}
 	
 	banner_index++;
 	if (banner_index > len) {banner_index = 1} 
 	
-	//banners[banner_index-1].style.display = "block"; 
 	fadeIn(banners[banner_index-1])
 
 	setTimeout(bannerChange, 10000); // Change image every 10 seconds
