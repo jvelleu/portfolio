@@ -36,19 +36,25 @@ $sidebar: 144px;
 @mixin body($size) {
 	font-family: $sans;
 	font-style: $regular;
-	font-size: $small;
+	font-size: $size;
 }
 
 @mixin body-bold($size) {
 	font-family: $sans;
 	font-style: $bold;
-	font-size: $small;
+	font-size: $size;
 }
 
 @mixin heading($size) {
 	font-family: $serif;
 	font-style: $bold;
-	font-size: $large;
+	font-size: $size;
+}
+
+@mixin heading-expand($size) {
+	font-family: $serif;
+	font-style: $bold;
+	font-size: $size;
 }
 	
 @mixin logo() {
@@ -371,6 +377,15 @@ nav {
 	display: grid;
 }
 
+.expand {
+	@include heading-expand($medium);
+	width: 100%;
+	padding: 2%;
+}
+
+.show {display: block !important;}
+
+.hide {display: none;}
 
 //Media Queries
 @media screen and (max-width: 600px) {
@@ -437,7 +452,7 @@ nav {
 	
 	.h-menu {display: none;}
 		
-	.project {grid-template-columns: 1fr 1fr;}
+	.project {grid-template-columns: 1fr;}
 	
 	.content {background-attachment: fixed;}
 }
@@ -462,7 +477,7 @@ nav {
 	
 	.h-menu {display: none;}
 		
-	.project {grid-template-columns: 1fr 1fr;}
+	.project {grid-template-columns: 1fr;}
 	
 	.content {background-attachment: fixed;}
 }
